@@ -6,11 +6,8 @@ export default class Players extends Component {
   constructor(props) {
     super(props);
     this.state = { players: [] };
-    this.sum = this.sum.bind(this);
+    this.sum = this.props.sum;
     this.newFavorite = this.newFavorite.bind(this);
-  }
-  sum(a, b) {
-    return a + b;
   }
   newFavorite(e) {
     // console.log(e.target.parentElement);

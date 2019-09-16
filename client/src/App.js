@@ -2,6 +2,7 @@ import React from "react";
 import Players from "./components/Players";
 import useLocalStorage from "./components/hooks/useLocalStorage";
 import "./App.scss";
+import { sum } from "./helpers";
 function App() {
   const [favorite, setFavorite] = useLocalStorage("favorite", "0");
   return (
@@ -9,7 +10,7 @@ function App() {
       <header className="App-header">
         <h1>Women's World Cup</h1>
       </header>
-      <Players favorite={favorite} setFavorite={setFavorite} />
+      <Players sum={sum} favorite={favorite} setFavorite={setFavorite} />
     </div>
   );
 }

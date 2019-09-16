@@ -1,19 +1,22 @@
 import React from "react";
 // import ReactDOM from "react-dom";
-import { render } from "@testing-library/react";
+import * as rtl from "@testing-library/react";
 import App from "./App";
 import Players from "./components/Players";
+import { sum } from "./helpers";
 
 it("renders without crashing", () => {
-  // const div = document.createElement("div");
-  // ReactDOM.render(<App />, div);
-  render(<App />);
-  // ReactDOM.unmountComponentAtNode(div);
+  rtl.render(<Players />);
 });
-it("renders without crashing", () => {
-  // const div = document.createElement("div");
-  render(<Players />);
-  // ReactDOM.render(<Players />, div);
-  // ReactDOM.unmountComponentAtNode(div);
+it("renders Women's World Cup Title", () => {
+  const wrapper = rtl.render(<App />);
+  const hasWorldCupText = wrapper.queryByText(/Women's World Cup/i);
+});
+it("renders Alex Morgan card", () => {
+  const wrapper = rtl.render(<App />);
+  const hasAlexMorganText = wrapper.queryByText(/Alex Morgan/i);
 });
 
+test("sum adds 2 values", () => {
+  expect(sum(1, 2)).toBe(3);
+});
