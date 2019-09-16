@@ -14,7 +14,14 @@ it("renders Women's World Cup Title", () => {
 });
 it("renders Alex Morgan card", () => {
   const wrapper = rtl.render(<App />);
-  const hasAlexMorganText = wrapper.queryByText(/Alex Morgan/i);
+  // const hasAlexMorganText = wrapper.queryByText(/Alex Morgan/i);
+  expect(wrapper.queryByText(/Alex Morgan/i));
+});
+
+it("renders playerCard label", () => {
+  const wrapper = rtl.render(<App />);
+  // const hasAlexMorganText = wrapper.queryByText(/Alex Morgan/i);
+  expect(wrapper.queryAllByLabelText(/playerCard/i));
 });
 
 test("sum adds 2 values", () => {
