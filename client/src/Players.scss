@@ -1,0 +1,14 @@
+.players {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .playerCard {
+    width: 20vw;
+    margin: 10px;
+    border: 1px solid black;
+    background: lightgray;
+    padding: 10px;
+  }
+}
