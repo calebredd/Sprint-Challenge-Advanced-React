@@ -1,0 +1,52 @@
+.main {
+  margin: 0px auto;
+  padding: 10px;
+  background-image: url("https://images.unsplash.com/photo-1434648957308-5e6a859697e8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80");
+  min-height: 100vh;
+  background-position-x: center;
+  background-position-y: 70%;
+  background-size: 100%;
+  background-attachment: fixed;
+
+
+  h2 {
+    color: black;
+    display: inline;
+    background: rgba(118, 146, 39, 0.5);
+  }
+
+  .players {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    background: none;
+
+    .playerCard {
+      width: 20vw;
+      margin: 10px;
+      border: 1px solid black;
+      background: rgba(18, 170, 56, 0.8);
+      padding: 10px;
+
+      button {
+        background: rgb(240, 219, 219);
+        border: 1px solid black;
+
+        &:hover {
+          background: red;
+          color: white;
+          border: 2px solid white;
+        }
+
+      }
+    }
+
+    .favorite {
+      color: white;
+      border: 2px solid white;
+      box-shadow: 0 0 4px royalblue;
+      background: red;
+    }
+  }
+}

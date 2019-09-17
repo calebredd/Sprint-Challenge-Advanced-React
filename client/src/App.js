@@ -1,24 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import Players from "./components/Players";
+import useLocalStorage from "./components/hooks/useLocalStorage";
+import "./App.scss";
+import { sum } from "./helpers";
 function App() {
+  const [favorite, setFavorite] = useLocalStorage("favorite", "0");
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Women's World Cup</h1>
       </header>
+      <Players sum={sum} favorite={favorite} setFavorite={setFavorite} />
     </div>
   );
 }
